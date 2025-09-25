@@ -28,6 +28,7 @@ global.fetch = jest.fn(() =>
 describe('Testing Grid Page', () => {
     it('Should load 3 charcaters', () => {
         render(<GridPage/>)
+        expect(screen.getByText('Personajes')).toBeInTheDocument();
         expect(screen.getByText('Rick Sanchez')).toBeInTheDocument();
         expect(screen.getByText('Morty Smith')).toBeInTheDocument();
         
